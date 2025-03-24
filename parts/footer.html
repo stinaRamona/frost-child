@@ -1,0 +1,138 @@
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|small","bottom":"var:preset|spacing|small","left":"30px","right":"30px"},"margin":{"top":"0px"}}},"layout":{"type":"constrained"},"fontSize":"small"} -->
+<div id="form-container">
+    <div class="b4-footer-info">
+        <h3>Rubrik rubrik rubrik?</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Eum corporis consectetur totam natus? Ducimus, aliquid porro 
+            praesentium iusto voluptates ad! Tempora assumenda beatae minus 
+            facere eius quasi repellat cupiditate nostrum?
+        </p>
+    </div>
+
+    <div class="b4-footer-info">
+        <h3>Hör av dig!</h3>
+        <form>
+            <input type="text" id="name" name="name" placeholder="Namn" required>
+
+            <input type="email" id="email" name="email" placeholder="Epost">
+
+            <input type="phone" id="phone" name="phone" placeholder="Telefon">
+
+            <input type="text" id="company" name="company" placeholder="Företag">
+
+            <textarea id="message" name="message" required placeholder="Meddelande"></textarea>
+            <br>
+            <input type="submit" value="Skicka">
+        </form>
+    </div>
+
+</div>
+
+<div id="footer-container" class="wp-block-group alignfull has-small-font-size" style="margin-top:0px;padding-top:var(--wp--preset--spacing--small);padding-right:30px;padding-bottom:var(--wp--preset--spacing--small);padding-left:30px">
+	<!-- wp:group {"align":"wide","layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between"}} -->
+	<div class="wp-block-group alignwide">
+		<!-- wp:paragraph -->
+        <div class="footer_info">
+            <h4>&copy; Företagsnamn </h4>
+            <p>Välkommen att kontakta oss!</p>
+            <br>
+            <p>Telefon: 08-123 45 67</p>
+            <p>E-post:info@företag.se</p>
+        </div>
+        
+        <div class="footer_info">
+            <h4>Länkar</h4>
+            <p><a href="#">Länk</a></p>
+            <p><a href="#">Länk</a></p>
+            <p><a href="#">Länk</a></p>
+            <p><a href="#">Länk</a></p>
+        </div>
+		<!-- /wp:paragraph -->
+
+
+        <div class="footer_info">
+            <h4>Information</h4>
+            <p><a href="#">Länk</a></p>
+            <p><a href="#">Länk</a></p>
+            <p><a href="#">Länk</a></p>
+            <p><a href="#">Länk</a></p>
+        </div>
+		<!-- wp:paragraph -->
+
+        <div class="footer_info">
+            <h4>Om företaget</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                Veritatis autem architecto libero commodi adipisci voluptate praesentium placeat, harum vitae 
+                tempora esse maiores corporis quaerat numquam perspiciatis aliquam non delectus ratione.
+            </p> 
+        </div>
+		<!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+
+	</div>
+	<!-- /wp:group -->
+</div>
+<!-- /wp:group -->
+<style>
+    #footer-container {
+        background-color: #000000;
+        color: #ffffff; 
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #footer-container a {
+        color: #ffffff;
+    }
+
+    .footer_info {
+        box-sizing: border-box; 
+        max-width: 25%; 
+    }
+
+    #form-container {
+        background-color: rgb(74, 126, 146);
+        background-image: linear-gradient(to right top, #00a1ba, #00BF98, #36C486);
+        color: #ffffff; 
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #form-container input, textarea {
+        margin: 0.5em;  
+        border-radius: 4px;
+        border: 1px solid #808080; 
+
+    }
+
+    #form-container textarea {
+        width: 83%; 
+    }
+
+    #form-container form input[type="text"], input[type="email"], input[type="phone"] {
+        width: 40%; 
+    }
+
+    #form-container input[type="submit"] {
+        background-color: #ffffff; 
+        color: #000000; 
+        border: none; 
+        padding: 0.5em; 
+        border-radius: 40px; 
+        cursor: pointer; 
+        max-width: 200px; 
+        width: 100%;
+    }
+
+    .b4-footer-info {
+        box-sizing: border-box; 
+        max-width: 50%; 
+        padding: 1em; 
+        margin: 0.5em; 
+    }
+
+</style>
