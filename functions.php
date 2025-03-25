@@ -12,7 +12,7 @@ function frost_child_register_block_patterns() {
     );
 
     register_block_pattern(
-        'frost/posts-grid', 
+        'frost-child/posts-grid', 
         array(
             'title'         => __('Grid of posts in three columns', 'frost-child'), 
             'description'   => _x('Grid with three columns. For posts', 'Block pattern description', 'frost-child'), 
@@ -30,7 +30,7 @@ function frost_child_news_boxes_three_shortcode() {
     ?>
     <div class="news-box-container">
 
-<!-- läser in dynamiskt vilka de tre senaste nyheterna är-->
+<!--läser in dynamiskt vilka de tre senaste nyheterna är-->
  <?php 
  query_posts('category_name=Nyheter&showposts=3'); 
 
@@ -67,7 +67,7 @@ function frost_child_news_boxes_three_shortcode() {
 
 .news-image-container {
     width: 100%; 
-    height: 200px; 
+    height: auto; 
     overflow: hidden; 
 } 
 
