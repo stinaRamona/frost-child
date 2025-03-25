@@ -10,6 +10,17 @@ function frost_child_register_block_patterns() {
             'categories'  => array( 'featured' ),
         )
     );
+
+    register_block_pattern(
+        'frost/posts-grid', 
+        array(
+            'title'         => __('Grid of posts in three columns', 'frost-child'), 
+            'description'   => _x('Grid with three columns. For posts', 'Block pattern description', 'frost-child'), 
+            'content'       => file_get_contents( get_theme_file_path('/patterns/posts-grid.php')), 
+            'categories'    => array('posts'), 
+            'blockTypes'    => array('core/query'),
+        )
+    ); 
 }
 add_action( 'init', 'frost_child_register_block_patterns' );
 
@@ -33,7 +44,7 @@ function frost_child_news_boxes_three_shortcode() {
             </div>
             <h3><?php the_title() ?></h3>
             <p><?php the_excerpt() ?></p>
-            <a href="<?php the_permalink() ?>"><button>Läs mer</button></a>
+            <a href="<?php the_permalink() ?>"><button class="read_more_btn">Läs mer</button></a>
         </div>
         <?php
     }
@@ -46,18 +57,35 @@ function frost_child_news_boxes_three_shortcode() {
     display: flex; 
     justify-content: space-between;
     flex-direction: row; 
+    max-width: 80%; 
 }
 
 .news-box {
     width: 33%; 
     padding: 10px; 
-    border: 1px solid black; 
 }
 
 .news-image-container {
     width: 100%; 
     height: 200px; 
     overflow: hidden; 
+} 
+
+.read_more_btn {
+    background-color: rgb(95, 167, 47);
+    color: white; 
+    padding: 0.75em; 
+    border-radius: 50px;
+    border: 1px solid rgb(95, 167, 47);
+    border: none; 
+    font-size: 1em; 
+} 
+
+.read_more_btn:hover {
+    background-color: transparent;
+    color:rgb(95, 167, 47); 
+    cursor: pointer;
+    border: 0.5px solid rgb(95, 167, 47);
 }
 
 </style>
