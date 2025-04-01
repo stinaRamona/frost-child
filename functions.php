@@ -1,5 +1,21 @@
 <?php
 
+function my_child_theme_enqueue_styles() {
+    wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
+    wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/style.css', array('parent-style'));
+}
+add_action('wp_enqueue_scripts', 'my_child_theme_enqueue_styles');
+
+/*göra excerpt mindre*/
+function theme_slug_excerpt_length( $length ) {
+    if ( is_admin() ) {
+            return $length;
+    }
+    return 13;
+}
+add_filter( 'excerpt_length', 'theme_slug_excerpt_length', 999 );
+
+
 function frost_child_register_block_patterns() {
     register_block_pattern(
         'frost-child/news-boxes-three',
@@ -52,43 +68,6 @@ function frost_child_news_boxes_three_shortcode() {
 ?>
 </div> 
 
-<style>
-.news-box-container {
-    display: flex; 
-    justify-content: space-between;
-    flex-direction: row; 
-    max-width: 80%; 
-}
-
-.news-box {
-    width: 33%; 
-    padding: 10px; 
-}
-
-.news-image-container {
-    width: 100%; 
-    height: auto; 
-    overflow: hidden; 
-} 
-
-.read_more_btn {
-    background-color: rgb(95, 167, 47);
-    color: white; 
-    padding: 0.75em; 
-    border-radius: 50px;
-    border: 1px solid rgb(95, 167, 47);
-    border: none; 
-    font-size: 1em; 
-} 
-
-.read_more_btn:hover {
-    background-color: transparent;
-    color:rgb(95, 167, 47); 
-    cursor: pointer;
-    border: 0.5px solid rgb(95, 167, 47);
-}
-
-</style>
 <?php
 return ob_get_clean(); 
 }

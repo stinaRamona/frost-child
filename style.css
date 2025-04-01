@@ -6,4 +6,174 @@ Author: Stina Persson
 Version: 1.0
 */
 
+/*Header knapp*/
+.wp-block-button__link {
+    background-color: rgb(95, 167, 47);
+    color: white;
+    padding: 0.75em;
+    border-radius: 50px;
+    font-size: 1em;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
 
+.wp-block-button__link:hover {
+    background-color: transparent;
+    color: rgb(95, 167, 47);
+    border: 1px solid rgb(95, 167, 47);
+}
+
+
+/*För nyhets-boxarna*/
+.news-box-container {
+    display: flex; 
+    justify-content: space-between;
+    flex-direction: row; 
+    max-width: 80%; 
+}
+
+.news-box {
+    width: 33%; 
+    padding: 10px; 
+}
+
+.news-image-container {
+    width: 100%; 
+    height: 300px; 
+    overflow: hidden; 
+} 
+
+.read_more_btn {
+    background-color: rgb(95, 167, 47);
+    color: white; 
+    padding: 0.75em; 
+    border-radius: 50px;
+    border: 1px solid rgb(95, 167, 47);
+    border: none; 
+    font-size: 1em; 
+} 
+
+.read_more_btn:hover {
+    background-color: transparent;
+    color:rgb(95, 167, 47); 
+    cursor: pointer;
+    border: 0.5px solid rgb(95, 167, 47);
+}
+
+/*formulär design*/
+#form-container {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#form-container input, textarea {
+    margin: 0.5em;  
+    border-radius: 4px;
+    border: 1px solid #808080; 
+}
+
+#form-container input[type="text"] {
+    width: 40%; 
+}
+
+#form-container input[type="email"] {
+    width: 40%; 
+}
+
+#form-container textarea {
+    width: 83%; 
+}
+
+/*formulär knapp*/
+.form-button {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 0.75em;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    max-width: 200px;
+    width: 100%;
+    font-size: 0.90em;
+}
+
+.form-button:hover {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+/*Formulär-inputs*/
+.wp-block-group input, .wp-block-group textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/*Footer*/
+.wp-block-group.alignfull {
+    padding: 2em; 
+}
+
+.wp-block-column ul li a {
+    color: white; 
+}
+
+/*blogg.html*/
+.blog-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/*knapp för att läsa mer*/
+.blog-content a {
+    text-decoration: none; 
+    background-color: rgb(95, 167, 47);
+    color: white; 
+    padding: 0.75em; 
+    border-radius: 50px;
+    border: 1px solid rgb(95, 167, 47);
+    border: none; 
+    font-size: 1em; 
+}
+
+.blog-content a:hover {
+    background-color: transparent;
+    color:rgb(95, 167, 47); 
+    cursor: pointer;
+    border: 0.5px solid rgb(95, 167, 47);
+}
+
+
+/*enskild post*/
+.blog-card:hover {
+    box-shadow: 2px 2px 2px #80808046;
+}
+
+/*layout med 3 per rad*/
+.wp-block-query .wp-block-post-template {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.wp-block-post-template .wp-block-group {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.wp-block-post-featured-image img {
+    width: 100%; 
+    border-radius: 5px;
+} 
+
+/*SVG-väg för att ha över block*/
+.wave-background {
+    background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201440%20320%22%3E%3Cpath%20fill%3D%22%23f3f4f5%22%20fill-opacity%3D%221%22%20d%3D%22M0%2C288L60%2C266.7C120%2C245%2C240%2C203%2C360%2C186.7C480%2C171%2C600%2C181%2C720%2C202.7C840%2C224%2C960%2C256%2C1080%2C250.7C1200%2C245%2C1320%2C203%2C1380%2C181.3L1440%2C160L1440%2C320L1380%2C320C1320%2C320%2C1200%2C320%2C1080%2C320C960%2C320%2C840%2C320%2C720%2C320C600%2C320%2C480%2C320%2C360%2C320C240%2C320%2C120%2C320%2C60%2C320L0%2C320Z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E') no-repeat center center;
+    background-size: cover;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: relative;
+}
